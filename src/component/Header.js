@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars} from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
-import { useState } from "react";
-import Nav from "./Nav";
 
 const Headers = styled.div`
     .menu {
@@ -19,19 +17,9 @@ const Headers = styled.div`
 
 
 
-function Header() {
-    const [view, setView] = useState();
-
-
-    const navHandler = (e) => {
-        // display:none을 없애기
-        // Nav 컴포넌트로 이동해서 
-        setView(!view);
-    }
-
+function Header({navHandler}) {
     return (
         <Headers>
-          { view ? <Nav /> : '' }
           <FontAwesomeIcon className="menu" icon={faBars} onClick={navHandler}/>
           <span> Do Eat!</span>
         </Headers>

@@ -18,7 +18,7 @@ const TodoHead = styled.div`
 function TodoInformation() {
     return (
         <TodoHead>
-            <h1>2022년 12월 15일 (월)</h1>
+            <h1>2022년 12월 16일 (금)</h1>
             <span>today</span>
             <h2>To do list</h2>
         </TodoHead>

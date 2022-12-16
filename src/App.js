@@ -3,6 +3,7 @@ import TodoTemplate from "./component/TodoTemplate";
 import Header from "./component/Header";
 import Nav from "./component/Nav";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
     
@@ -16,17 +17,17 @@ function App() {
 const [openNav, setopenNav] = useState(false);
 
 const navHandler = () => {
-  setopenNav(!false);
-}
+  setopenNav(!openNav);
+} 
 
   return (
     <>
-      <GlobalStyle />
-      <Wrapper>
-        <Header onClick={navHandler}/>
-        { openNav===true ? <Nav /> : ""}
-        <TodoTemplate />
-      </Wrapper>
+        <GlobalStyle />
+        <Wrapper>
+          <Header navHandler={navHandler}/>
+          { openNav ? <Nav navHandler={navHandler} /> : ""}
+          <TodoTemplate />
+        </Wrapper>
     </>
   );
 }

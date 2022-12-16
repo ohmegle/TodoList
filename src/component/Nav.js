@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { BiLeftArrowAlt, BiCalendarEdit, BiLayer, BiCalendar, BiChevronRight } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const NavBar = styled.div`
     width: 200px;
     height: 1000px;
-    background-color: #DDD8D3;
+    background-color: #F9D096;
     font-size: 25px;
     margin-top: -10px;
     margin-left: -120px;
@@ -32,11 +33,11 @@ const NavBar = styled.div`
     }
 `
 
-function Hambuger() {
+function Nav({navHandler}) {
     return (
         <NavBar>
             <div className="close">
-                <BiLeftArrowAlt/>
+                <BiLeftArrowAlt onClick={navHandler}/>
             </div>
             <div>
                 <BiCalendarEdit/>
@@ -46,7 +47,7 @@ function Hambuger() {
             <div>
                 <BiLayer />
                 <span>latest</span>
-                <BiChevronRight className="arrow"/>
+                <Link to="/latest"><BiChevronRight className="arrow"/></Link>
             </div>
             <div>
                 <BiCalendar/>
@@ -57,4 +58,4 @@ function Hambuger() {
     )
 }
 
-export default Hambuger;
+export default Nav;

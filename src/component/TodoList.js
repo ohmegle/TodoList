@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Todo from "./Todo";
 
-const Lists = styled.div`
-    display: flex;
+const Lists = styled.div` 
     align-items: center;
     flex-direction: column;
-    margin-left: -10px;
+    margin-left: 20px;
+    z-index: 100;
    
     ul {
         list-style: none;

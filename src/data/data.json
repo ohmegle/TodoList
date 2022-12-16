@@ -1,20 +1,12 @@
 {
   "todos": [
     {
-      "text": "dddd",
+      "text": "양치하기",
       "id": 1
     },
     {
-      "text": "ddddd",
+      "text": "공부하기",
       "id": 2
-    },
-    {
-      "text": "ddddddd",
-      "id": 3
-    },
-    {
-      "text": "ddddddd",
-      "id": 4
     }
   ]
 }
