@@ -1,68 +1,40 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
-import Footer from "./Footer";
-import data from "../data/data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck, faCircle } from "@fortawesome/free-regular-svg-icons";
-import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import Todo from "./Todo";
 
 const Lists = styled.div`
-    margin-top: 10px;
     display: flex;
     align-items: center;
-    padding-top: 12px;
     flex-direction: column;
-    width: 400px;
-    &:hover {
-        ${Remove} {
-            display: initial;
-        }
-    }
-
+    margin-left: -10px;
+   
     ul {
         list-style: none;
-    }
-
-    .image {
-      width: 150px;
-      margin-top: 50px;
-    
+        padding: 0;
     }
 `;
 
-const Remove = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    &:hover {
-        color: gray;
-    }
-    display: none;
-`;
+function TodoList({ change, setChange }) {
+    const [todos, setTodos] = useState([]);
+            
+    useEffect(()=> {
+        fetch("http://localhost:3001/todos")
+            .then(res => res.json())
+            .then(res => setTodos(res))
+            .catch(e => console.log(e));
+    }, [change])
 
-
-// 누르면 faCircleCheck 다시 누르면 faCircle 
-
-function TodoList() {
     return (
         <Lists>
-            <FontAwesomeIcon icon={faCircleCheck} />
-            <FontAwesomeIcon icon={faCircle} />
             <ul>
                 { 
-                    data.map((el) => {
-                        return <li>{el.text}</li>
+                    todos.map((el,idx) => {
+                        return(
+                            <Todo key={idx} todo={el} change={change} setChange={setChange} />
+                        )
                     })
                 }
-            </ul>     
-            <Remove>
-                <FontAwesomeIcon icon={faTrash} />
-            </Remove>
-            
-            <img className="image" src="https://i.pinimg.com/564x/5d/6f/d1/5d6fd1521ea4f125c701c3c423046bd3.jpg" />
-            <Footer />
+            </ul>      
         </Lists>
     );
 }
