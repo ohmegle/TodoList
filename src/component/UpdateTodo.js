@@ -16,6 +16,7 @@ const UpdateComponent = styled.div`
         border: 0px;
         border-radius: 30px;
         cursor: pointer;
+        box-shadow: -6px -6px 5px rgba(228,226,226,0.8), 6px 6px 10px rgba(0,0,0,0.2);
     }
 
     div {

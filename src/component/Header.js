@@ -3,6 +3,9 @@ import { faBars} from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 
 const Headers = styled.div`
+    margin-left: 5px;
+    margin-top: 5px;
+
     .menu {
         font-size: 25px;
         cursor: pointer;
@@ -13,9 +16,6 @@ const Headers = styled.div`
         margin-left: 5px;
     }
 `
-
-
-
 
 function Header({navHandler}) {
     return (

@@ -11,6 +11,7 @@ const ListComponent = styled.div`
     align-items: center;
     margin-bottom: 5px;
     z-index: 100;
+    margin-top: 20px;
     
     .circleIcon {
         width: 30px;
@@ -20,7 +21,8 @@ const ListComponent = styled.div`
 
     li{
         width: 250px;
-        font-size: 13px;
+        font-size: 15x;
+        font-family: var(--font-FlowerSalt);
     }
 `
 

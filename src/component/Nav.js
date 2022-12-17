@@ -3,12 +3,15 @@ import { BiLeftArrowAlt, BiCalendarEdit, BiLayer, BiCalendar, BiChevronRight } f
 import { Link } from "react-router-dom";
 
 const NavBar = styled.div`
-    width: 200px;
+    position : fixed;
+    top : 0px;
+    left : 0px;
+    width: 220px;
     height: 1000px;
-    background-color: #F9D096;
+    background-color: #FFE5D9;
     font-size: 25px;
-    margin-top: -10px;
-    margin-left: -120px;
+    z-index: 500;
+    box-shadow: 0px 0px 5px 5px gray;
     
     .close {
         margin-left: 162px;
@@ -23,13 +26,14 @@ const NavBar = styled.div`
 
     span {
         display: inline-block;
-        width: 84px;
+        width: 100px;
         margin-left: 7px;
     }
 
     .arrow {
         margin-left: 40px;
         cursor: pointer;
+        color: black;
     }
 `
 
@@ -42,17 +46,17 @@ function Nav({navHandler}) {
             <div>
                 <BiCalendarEdit/>
                 <span>today</span>
-                <BiChevronRight className="arrow"/>
+                <Link to="/today"><BiChevronRight className="arrow"/></Link>
             </div>
             <div>
                 <BiLayer />
-                <span>latest</span>
-                <Link to="/latest"><BiChevronRight className="arrow"/></Link>
+                <span>the past</span>
+                <Link to="/thePast"><BiChevronRight className="arrow"/></Link>
             </div>
             <div>
                 <BiCalendar/>
                 <span>calendar</span>
-                <BiChevronRight className="arrow"/>
+                <Link to="/calendar"><BiChevronRight className="arrow"/></Link>
             </div>
         </NavBar>
     )

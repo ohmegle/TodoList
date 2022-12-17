@@ -10,10 +10,11 @@ const Template = styled.div`
     margin-top: 100px;
     width: 400px;
     height: 600px;
-    border: 3px solid black;
+    border: 3px solid #efe5dc;
     background-color: white;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
 `
 
 function TodoTemplate() {

@@ -3,9 +3,13 @@ import styled from "styled-components";
 
 const TodoHead = styled.div`
     margin-left: 30px;
-    h1 {
+    margin-top: 40px;
+    font-weight: bold;
+
+    span {
         margin-left: 65px;
         font-size: 25px;
+        background:linear-gradient(to top, #FEC5BB 50%, transparent 50%);
     }
 
     h2{
@@ -18,8 +22,8 @@ const TodoHead = styled.div`
 function TodoInformation() {
     return (
         <TodoHead>
-            <h1>2022년 12월 16일 (금)</h1>
-            <span>today</span>
+            <span>2022년 12월 16일 (금)</span>
+            <div>today</div>
             <h2>To do list</h2>
         </TodoHead>
     )

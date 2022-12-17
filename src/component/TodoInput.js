@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import "../index.css";
 
 // 추가 버튼을 누를때 json server에 post 요청을 넣는다..?
 // useState를 사용해서 input창의 값이 바뀌면 만듦..
@@ -25,6 +26,9 @@ const InputWrapper = styled.div`
         background-color: #3BD09C;
         color: white;
         font-weight: bold;
+        font-family: "Flowersalt";
+        font-size: 16px;
+        box-shadow: -6px -6px 5px rgba(228,226,226,0.8), 6px 6px 10px rgba(0,0,0,0.2);
     }
     
     button:hover {

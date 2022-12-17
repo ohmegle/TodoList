@@ -7,10 +7,29 @@ const Lists = styled.div`
     flex-direction: column;
     margin-left: 20px;
     z-index: 100;
+    height: 20px;
    
     ul {
         list-style: none;
         padding: 0;
+        width: 370px;
+        height: 260px;
+        overflow: hidden;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        ::-webkit-scrollbar{
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background-color: #BAD7E9;
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+            border-radius: 100px;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: #e4e4e4;
+            border-radius: 100px;
+        }
+        
     }
 `;
 
