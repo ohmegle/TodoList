@@ -14,6 +14,7 @@ const InputWrapper = styled.div`
         width: 250px;
         border: 2px solid black;
         border-radius: 30px;
+        padding-left: 10px;
     }
 
     button {

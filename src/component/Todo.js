@@ -21,7 +21,7 @@ const ListComponent = styled.div`
 
     li{
         width: 250px;
-        font-size: 15x;
+        font-size: 20px;
         font-family: var(--font-FlowerSalt);
     }
 `

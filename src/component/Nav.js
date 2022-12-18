@@ -11,12 +11,18 @@ const NavBar = styled.div`
     background-color: #FFE5D9;
     font-size: 25px;
     z-index: 500;
-    box-shadow: 0px 0px 5px 5px gray;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
     
     .close {
-        margin-left: 162px;
+        font-size: 18px;
+        text-align: center;
+        margin-left: 20px;
         cursor: pointer;
         color: #443F4A
+    }
+
+    .close > span {
+        margin-right: 25px;
     }
 
     > div {
@@ -35,12 +41,17 @@ const NavBar = styled.div`
         cursor: pointer;
         color: black;
     }
+
+    .arrow:hover {
+        background:linear-gradient(to top, #FEC5BB 50%, transparent 50%);
+    }
 `
 
 function Nav({navHandler}) {
     return (
         <NavBar>
             <div className="close">
+                <span>Do Eat!</span>
                 <BiLeftArrowAlt onClick={navHandler}/>
             </div>
             <div>

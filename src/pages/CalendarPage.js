@@ -19,6 +19,7 @@ const Template = styled.div`
     background-color: white;
     display: flex;
     flex-direction: column;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2);
     
     /* react calendar 부분 */
     .react-calendar__navigation__label > span {
